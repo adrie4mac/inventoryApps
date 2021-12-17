@@ -1,0 +1,70 @@
+# built application files (include .apk, .ap_,.dex,.class )
+build/
+
+# generated files
+bin/
+gen/
+out/
+
+# Files for the ART/Dalvik VM
+*.dex
+
+# Ignore gradle files
+.gradle/
+
+# Local configuration file (sdk url, etc)
+/local.properties
+/project.properties
+
+# Log Files
+*.log
+
+# User-specific configurations
+.idea/
+.cxx
+
+# OS-specific files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Android Patch
+gen-external-apklibs
+
+# External native build folder generated in Android Studio 2.2 and later
+.externalNativeBuild
+
+# NDK
+obj/
+
+# IntelliJ IDEA
+*.iml
+*.iws
+/out/
+
+# Legacy Eclipse project files
+.classpath
+.project
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.war
+*.ear
+
+### Gradle ###
+**/build/**
+
+# Ignore Gradle GUI config
+gradle-app.setting
+
+# Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
+!gradle-wrapper.jar
+
+# Cache of project
+.gradletasknamecache

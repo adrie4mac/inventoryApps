@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_navigation_graph"
+    app:startDestination="@id/login_fragment">
+
+    <action
+        android:id="@+id/action_to_product_list"
+        app:destination="@id/product_list_fragment" />
+
+    <fragment
+        android:id="@+id/login_fragment"
+        android:name="id.adriesavana.medicineinventory.ui.login.LoginFragment"
+        tools:layout="@layout/fragment_login">
+
+        <action
+            android:id="@+id/action_to_registration"
+            app:destination="@id/registration_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/registration_fragment"
+        android:name="id.adriesavana.medicineinventory.ui.register.RegisterFragment"
+        tools:layout="@layout/fragment_register" />
+
+    <fragment
+        android:id="@+id/product_list_fragment"
+        android:name="id.adriesavana.medicineinventory.ui.product.ProductFragment"
+        tools:layout="@layout/fragment_product_list">
+
+        <action
+            android:id="@+id/action_to_product_detail"
+            app:destination="@id/product_detail_fragment" />
+
+        <action
+            android:id="@+id/action_to_add_product"
+            app:destination="@id/add_product_fragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/product_detail_fragment"
+        android:name="id.adriesavana.medicineinventory.ui.product.detail.ProductDetailFragment"
+        tools:layout="@layout/fragment_view_product">
+        <argument
+            android:name="product"
+            app:argType="id.adriesavana.medicineinventory.data.model.Product"
+            app:nullable="false" />
+
+        <argument
+            android:name="editable"
+            android:defaultValue="false"
+            app:argType="boolean" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/add_product_fragment"
+        android:name="id.adriesavana.medicineinventory.ui.product.addproduct.AddNewProductFragment"
+        tools:layout="@layout/fragment_view_product"/>
+
+</navigation>
